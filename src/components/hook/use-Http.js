@@ -5,6 +5,10 @@ const useHttp = () => {
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState(null);
 
+  const clear = () => {
+    setError(null);
+  };
+
   const fetchHandler = async (url, method, body, headers) => {
     setIsLoading(true);
     setError(null);
@@ -32,6 +36,7 @@ const useHttp = () => {
     isLoading,
     error,
     fetchHandler,
+    clear,
   };
 };
 
