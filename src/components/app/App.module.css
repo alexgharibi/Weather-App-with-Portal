@@ -6,6 +6,7 @@
   bottom: 0;
   right: 0;
   overflow: auto;
-  background: url("../../assets/backTwo.jpeg");
+  background: url("../../assets/backThree.jpg");
   background-repeat: none;
+  background-size: cover;
 }

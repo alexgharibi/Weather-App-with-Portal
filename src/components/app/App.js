@@ -1,11 +1,11 @@
 import Nav from "../nav/Nav";
-import "./App.css";
+import classes from "./App.module.css";
 import { Fragment } from "react";
 
 const App = () => {
   return (
     <Fragment>
-      <div className="App">
+      <div className={classes.App}>
         <Nav />
       </div>
     </Fragment>

@@ -1,0 +1,12 @@
+.display-box {
+  margin-top: 5rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.text {
+  font-weight: 800;
+  text-align: left;
+  margin-left: 5rem;
+  line-height: 1.6;
+}

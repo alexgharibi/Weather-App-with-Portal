@@ -50,7 +50,7 @@ const Weather = () => {
           onHideCart={hideCartHandler}
         />
       )}
-      <h1>Weather</h1>
+      <h1>Weather App</h1>
       <div className={classes.box}>
         <input
           className={classes.input}

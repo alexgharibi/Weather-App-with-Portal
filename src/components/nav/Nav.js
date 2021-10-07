@@ -1,5 +1,5 @@
 import React from "react";
-import "./nav.css";
+import classes from "./nav.module.css";
 import Home from "../pages/Home";
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import Weather from "../pages/Weather";
@@ -20,19 +20,19 @@ const routes = [
 const Nav = () => {
   return (
     <Router>
-      <div className="container">
-        <div className="sidebar_container">
-          <ul className="sidebar">
-            <li className="a1">
+      <div className={classes.container}>
+        <div className={classes["sidebar_container"]}>
+          <ul className={classes.sidebar}>
+            <li>
               <Link to="/">Home</Link>
             </li>
-            <hr className="line" />
+            <hr className={classes.line} />
             <li>
               <Link to="/weather">Weather</Link>
             </li>
           </ul>
         </div>
-        <div className="page_container">
+        <div className={classes["page_container"]}>
           <Switch>
             {routes.map((route, index) => (
               <Route

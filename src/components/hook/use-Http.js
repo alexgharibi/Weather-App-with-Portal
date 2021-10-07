@@ -1,5 +1,4 @@
-import React, { useState } from "react";
-import { useHistory } from "react-router-dom";
+import { useState } from "react";
 
 const weatherIcon = {
   Thunderstorm: "wi-thunderstorm",
@@ -19,11 +18,8 @@ const useHttp = () => {
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState(null);
 
-  const history = useHistory();
-
   const clear = () => {
     setError(null);
-    history.push("/");
   };
 
   const getWeatherIcon = (icons, rangeId) => {
