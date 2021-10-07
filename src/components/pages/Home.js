@@ -1,22 +1,34 @@
 import { Fragment } from "react";
 import classes from "./home.module.css";
 import tugboat from "../../assets/tugboat.png";
+import { useTranslation } from "react-i18next";
+import i18n from "i18next";
 
 const Home = () => {
+  const { t } = useTranslation();
+
+  const onChange = (event) => {
+    i18n.changeLanguage(event.target.value);
+  };
+
   return (
     <Fragment>
       <div>
-        <h2>Home</h2>
-        <p>Welcome to the Tugboat Logic weather App!</p>
+        <h2>{t("Home")}</h2>
+        <p>{t("Welcome")}</p>
+        <select
+          name="language"
+          onChange={onChange}
+          className={classes.selector}
+        >
+          <option value="en">English</option>
+          <option value="fr">French</option>
+        </select>
       </div>
       <div className={classes["display-box"]}>
         <div className={classes.text}>
-          <p>Hi Everyone</p>
-          <p>
-            That was a really cool challenge but as I'm not instructed to do
-            anything with home page, I've decided to put Tugboat Logic logo
-            here, add localization and have fun. Why not!
-          </p>
+          <p>{t("Hi Everyone")}</p>
+          <p>{t("That")}</p>
           <p>Cheers!</p>
         </div>
         <div>

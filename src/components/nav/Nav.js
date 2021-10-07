@@ -3,6 +3,7 @@ import classes from "./nav.module.css";
 import Home from "../pages/Home";
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import Weather from "../pages/Weather";
+import { useTranslation } from "react-i18next";
 
 const routes = [
   {
@@ -18,17 +19,19 @@ const routes = [
 ];
 
 const Nav = () => {
+  const { t } = useTranslation();
+
   return (
     <Router>
       <div className={classes.container}>
         <div className={classes["sidebar_container"]}>
           <ul className={classes.sidebar}>
             <li>
-              <Link to="/">Home</Link>
+              <Link to="/">{t("Home")}</Link>
             </li>
             <hr className={classes.line} />
             <li>
-              <Link to="/weather">Weather</Link>
+              <Link to="/weather">{t("Weather")}</Link>
             </li>
           </ul>
         </div>

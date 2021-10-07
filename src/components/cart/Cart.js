@@ -2,6 +2,7 @@ import Modal from "./../UI/Modal";
 import classes from "./Cart.module.css";
 import { useState } from "react";
 import "weather-icons/css/weather-icons.css";
+import { celcius, fahrenheit } from "./Conversion";
 
 const Cart = (props) => {
   const [tempreture, setTempreture] = useState(null);
@@ -11,15 +12,11 @@ const Cart = (props) => {
   const onChangeTempHandler = (event) => {
     const selected = event.target.value;
     if (selected === "Celsius") {
-      let cel = Math.round(weather - 273.15) + "\u00B0C";
-      setTempreture(cel);
+      setTempreture(celcius(weather));
     }
-
     if (selected === "Fahrenheit") {
-      let far = Math.round((weather * 9) / 5 - 459.67) + "\u00B0F";
-      setTempreture(far);
+      setTempreture(fahrenheit(weather));
     }
-
     if (selected === "Kelvin") {
       setTempreture(weather + "\u00B0K");
     }
