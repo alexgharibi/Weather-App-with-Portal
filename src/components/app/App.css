@@ -6,4 +6,6 @@
   bottom: 0;
   right: 0;
   overflow: auto;
+  background: url("../../assets/backTwo.jpeg");
+  background-repeat: none;
 }

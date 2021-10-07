@@ -1,5 +1,5 @@
-import { useRef, useState, useEffect, useContext } from "react";
-import classes from './weather.module.css'
+import { useRef, useState } from "react";
+import classes from "./weather.module.css";
 import LoadingIndicator from "../UI/LoadingIndicator";
 import useHttp from "../hook/use-Http";
 import ErrorModal from "../UI/ErrorModal";
@@ -29,20 +29,19 @@ const Weather = () => {
       `https://api.openweathermap.org/data/2.5/weather?q=${enteredCityName}&appid=${apiKey}`
     );
 
-    
-    setCartIsShown(true)
+    setCartIsShown(true);
+
+    cityNameInputRef.current.value = "";
   };
 
   const hideCartHandler = () => {
     setCartIsShown(false);
   };
 
-
-
   return (
-    <div>
+    <div className={classes.weather}>
       {error && <ErrorModal onClose={clear}>{error}</ErrorModal>}
-      {cartIsShown && (
+      {!error && cartIsShown && (
         <Cart
           weather={weather}
           icon={icon}
@@ -51,10 +50,19 @@ const Weather = () => {
           onHideCart={hideCartHandler}
         />
       )}
-      <h2>Weather</h2>
-      <input className={classes.input} placeholder="City name" ref={cityNameInputRef} />
-      {isLoading && <LoadingIndicator />}
-      <button onClick={cityInputHandler}>Check Weather</button>
+      <h1>Weather</h1>
+      <div className={classes.box}>
+        <input
+          className={classes.input}
+          placeholder="City name"
+          autoComplete="hidden"
+          ref={cityNameInputRef}
+        />
+        {isLoading && <LoadingIndicator />}
+        <button className={classes.btn} onClick={cityInputHandler}>
+          Check Weather
+        </button>
+      </div>
     </div>
   );
 };

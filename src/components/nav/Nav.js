@@ -12,6 +12,7 @@ const routes = [
   },
   {
     path: "/weather",
+    exact: true,
     main: () => <Weather />,
   },
 ];
@@ -22,9 +23,10 @@ const Nav = () => {
       <div className="container">
         <div className="sidebar_container">
           <ul className="sidebar">
-            <li>
+            <li className="a1">
               <Link to="/">Home</Link>
             </li>
+            <hr className="line" />
             <li>
               <Link to="/weather">Weather</Link>
             </li>

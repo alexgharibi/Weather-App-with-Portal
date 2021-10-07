@@ -1,9 +1,41 @@
 .container {
   text-align: center;
-  background: url("../../assets/backOne.jpg");
-  background-repeat: none;
+  color: white;
+}
+
+h1 {
+  margin-bottom: 4rem;
+}
+
+h3 {
+  letter-spacing: 0.3rem;
+}
+
+h3::first-letter {
+  text-transform: capitalize;
 }
 
 i {
-  font-size: 80px;
+  font-size: 100px;
+  margin-bottom: 2rem;
+}
+
+.box {
+  position: relative;
+  color: white;
+  margin-top: 1rem;
+  font-weight: 600;
+  height: 100%;
+  border: none;
+  box-shadow: none;
+  background-color: transparent;
+  font-size: 0.8rem;
+  padding: 3px 3px;
+  transform: translateY(-150px);
+  outline: none;
+}
+
+option {
+  background-color: white;
+  color: black;
 }

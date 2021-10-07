@@ -19,11 +19,11 @@ const useHttp = () => {
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState(null);
 
-  const history = useHistory()
+  const history = useHistory();
 
   const clear = () => {
     setError(null);
-    history.push("/weather")
+    history.push("/");
   };
 
   const getWeatherIcon = (icons, rangeId) => {

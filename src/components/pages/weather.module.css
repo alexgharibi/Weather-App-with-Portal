@@ -1,14 +1,54 @@
-.input {
-    background-color: transparent;
-    color: white;
-    border: 0;
-    border-bottom: 2px solid whitesmoke;
-    border-radius: 0; 
+.weather h1 {
+  margin-bottom: 3rem;
 }
 
-input:focus {
-    background-color: transparent;
-    box-shadow: none;
-    border: none;
-    border-bottom: 2px solid black;
+.box {
+  font-size: 30px;
+}
+
+.input {
+  background-color: transparent;
+  color: black;
+  border: 0;
+  border-bottom: 2px solid black;
+  border-radius: 0;
+  margin-right: 4rem;
+  width: 300px;
+  font-size: 1.5rem;
+  font-family: "Times New Roman", Times, serif;
+}
+
+.input:focus {
+  background-color: transparent;
+  box-shadow: none;
+  border: none;
+  border-bottom: 2px solid black;
+  background-color: transparent;
+  outline: none;
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+  -webkit-box-shadow: 0 0 0 30px white inset !important;
+  box-shadow: none;
+}
+
+.btn {
+  color: rgb(26, 25, 25);
+  border: 0;
+  padding: 5px 15px;
+  outline: none;
+  font-weight: 600;
+  background-color: teal;
+  font-size: 1rem;
+  border-radius: 10px;
+  box-shadow: 0 0 20px 10px #7c7979;
+  font-family: "Times New Roman", Times, serif;
+}
+
+.btn:hover {
+  background-color: rgb(4, 175, 175);
+  cursor: pointer;
 }
