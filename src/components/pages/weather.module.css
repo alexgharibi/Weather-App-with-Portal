@@ -4,17 +4,20 @@
 
 .box {
   font-size: 30px;
+  display: grid;
+  grid-template-columns: 1fr;
 }
 
 .input {
+  text-align: center;
   background-color: transparent;
   color: black;
   border: 0;
   border-bottom: 2px solid black;
   border-radius: 0;
-  margin-right: 4rem;
-  width: 300px;
-  font-size: 1.5rem;
+  margin-bottom: 40px;
+  width: 120px;
+  font-size: 1.2rem;
   font-family: "Times New Roman", Times, serif;
 }
 
@@ -51,4 +54,16 @@ input:-webkit-autofill:active {
 .btn:hover {
   background-color: rgb(4, 175, 175);
   cursor: pointer;
+}
+
+@media (min-width: 768px) {
+  .box {
+    grid-template-columns: 60% 1fr;
+  }
+  .input {
+    font-size: 1.5rem;
+    text-align: start;
+    width: 300px;
+    margin-right: 4rem;
+  }
 }

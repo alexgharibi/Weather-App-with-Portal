@@ -1,12 +1,44 @@
 .display-box {
   margin-top: 5rem;
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr;
+  padding: 50px 10px;
+  margin: 30px 20px;
 }
 
 .text {
   font-weight: 800;
   text-align: left;
-  margin-left: 5rem;
   line-height: 1.6;
+  margin-bottom: 40px;
+}
+
+.selector {
+  width: 100px;
+  border-color: transparent;
+  border: none;
+  margin-top: 20px;
+  padding: 0 10px 0 0;
+  outline: none;
+  background-color: transparent;
+  color: black;
+  font-weight: 500;
+  font-size: 15px;
+}
+
+.selector:hover {
+  font-weight: bold;
+}
+
+@media (min-width: 768px) {
+  .display-box {
+    grid-template-columns: 1fr 1fr;
+  }
+  .text {
+    margin-left: 5rem;
+  }
+
+  .selector {
+    margin-left: 77px;
+  }
 }

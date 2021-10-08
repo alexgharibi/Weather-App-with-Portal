@@ -11,8 +11,8 @@
 .modal {
   position: fixed;
   top: 10vh;
-  left: 5%;
-  width: 90%;
+  left: 15%;
+  width: 60%;
   background: url("../../assets/backOne.jpg");
   background-repeat: none;
   padding: 1rem;

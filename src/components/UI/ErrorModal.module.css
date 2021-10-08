@@ -1,8 +1,8 @@
 .error-modal {
   position: fixed;
   top: 30vh;
-  left: calc(50% - 15rem);
-  width: 30rem;
+
+  width: 20rem;
   background: white;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.26);
   z-index: 100;
@@ -54,4 +54,11 @@
 .btn:hover {
   background-color: rgb(4, 175, 175);
   cursor: pointer;
+}
+
+@media (min-width: 768px) {
+  .error-modal {
+    width: 30rem;
+    left: calc(50% - 15rem);
+  }
 }

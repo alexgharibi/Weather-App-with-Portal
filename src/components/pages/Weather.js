@@ -4,10 +4,13 @@ import LoadingIndicator from "../UI/LoadingIndicator";
 import useHttp from "../hook/use-Http";
 import ErrorModal from "../UI/ErrorModal";
 import Cart from "../cart/Cart";
+import { useTranslation } from "react-i18next";
 
 const apiKey = "38fb68262a1dad15193eb72bff90089d";
 
 const Weather = () => {
+  const { t } = useTranslation();
+
   const {
     isLoading,
     error,
@@ -50,18 +53,22 @@ const Weather = () => {
           onHideCart={hideCartHandler}
         />
       )}
-      <h1>Weather App</h1>
+      <h1>{t("Weather App")}</h1>
       <div className={classes.box}>
-        <input
-          className={classes.input}
-          placeholder="City name"
-          autoComplete="hidden"
-          ref={cityNameInputRef}
-        />
-        {isLoading && <LoadingIndicator />}
-        <button className={classes.btn} onClick={cityInputHandler}>
-          Check Weather
-        </button>
+        <div>
+          <input
+            className={classes.input}
+            placeholder={t("City name")}
+            autoComplete="hidden"
+            ref={cityNameInputRef}
+          />
+          {isLoading && <LoadingIndicator />}
+        </div>
+        <div>
+          <button className={classes.btn} onClick={cityInputHandler}>
+            {t("Check Weather")}
+          </button>
+        </div>
       </div>
     </div>
   );

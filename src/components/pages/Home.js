@@ -16,14 +16,6 @@ const Home = () => {
       <div>
         <h2>{t("Home")}</h2>
         <p>{t("Welcome")}</p>
-        <select
-          name="language"
-          onChange={onChange}
-          className={classes.selector}
-        >
-          <option value="en">English</option>
-          <option value="fr">French</option>
-        </select>
       </div>
       <div className={classes["display-box"]}>
         <div className={classes.text}>
@@ -34,6 +26,14 @@ const Home = () => {
         <div>
           <img src={tugboat} alt="logo" />
         </div>
+        <select
+          name="language"
+          onChange={onChange}
+          className={classes.selector}
+        >
+          <option value="en">English</option>
+          <option value="fr">French</option>
+        </select>
       </div>
     </Fragment>
   );

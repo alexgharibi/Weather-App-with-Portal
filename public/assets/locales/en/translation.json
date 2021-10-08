@@ -3,5 +3,8 @@
   "Welcome": "Welcome to the Tugboat Logic weather App!",
   "Hi Everyone": "Hi everyone",
   "That": "That was a really cool challenge but as I'm not instructed to do anything with home page, I've decided to put Tugboat Logic logo here, add localization and have fun. Why not!",
-  "Weather": "Weather"
+  "Weather": "Weather",
+  "Check Weather": "Check Weather",
+  "Weather App": "Weather App",
+  "City name": "City name"
 }
