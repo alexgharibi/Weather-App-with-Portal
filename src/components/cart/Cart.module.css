@@ -35,6 +35,11 @@ i {
   outline: none;
 }
 
+.spinner {
+  text-align: center;
+  margin-top: 70px;
+}
+
 option {
   background-color: white;
   color: black;
