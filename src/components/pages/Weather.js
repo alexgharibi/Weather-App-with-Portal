@@ -61,7 +61,7 @@ const Weather = () => {
           <input
             name="search"
             className={classes.input}
-            placeholder="City name"
+            placeholder={t("City name")}
             autoComplete="hidden"
             spellCheck="false"
             ref={cityNameInputRef}
