@@ -23,7 +23,7 @@ const Home = () => {
           <p>{t("That")}</p>
           <p>Cheers!</p>
         </div>
-        <div>
+        <div className={classes.box}>
           <img src={tugboat} alt="logo" />
         </div>
         <select
