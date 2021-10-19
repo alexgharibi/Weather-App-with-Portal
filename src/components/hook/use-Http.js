@@ -22,7 +22,7 @@ const useHttp = () => {
     setError(null);
   };
 
-  const getWeatherIcon = (icons, rangeId) => {
+  const getWeatherIcon = (weatherIcon, rangeId) => {
     switch (true) {
       case rangeId >= 200 && rangeId <= 232:
         setIcon(weatherIcon.Thunderstorm);
